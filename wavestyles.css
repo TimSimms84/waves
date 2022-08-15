@@ -1,0 +1,37 @@
+/* !!!!! Global !!!!! */
+
+body {
+	background-image: url("./images/background.jpg");
+	background-position: top, center;
+	color: aquamarine;
+	margin: 0 1.5rem;
+	width: auto;
+	height: auto;
+}
+
+.border-aquamarine {
+	border-color: aquamarine;
+}
+
+
+/* !!!!! Header Section !!!!! */
+header {
+	font-family: 'Corinthia';
+}
+
+
+/* !!!!! Main Section !!!!! */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* !!!!! Footer Section !!!!! */
+
