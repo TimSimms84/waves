@@ -13,11 +13,12 @@ body {
 	border-color: aquamarine;
 }
 
-
-/* !!!!! Header Section !!!!! */
-header {
+.font-corinthia {
 	font-family: 'Corinthia';
 }
+
+
+/* !!!!! Header Section !!!!! */
 
 
 /* !!!!! Main Section !!!!! */
