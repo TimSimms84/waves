@@ -10,11 +10,15 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<!-- Local CSS -->
 	<link rel="stylesheet" href="wavestyles.css">
-	<!-- Font import -->
+	<!-- Font Import -->
 	<link href='https://fonts.googleapis.com/css?family=Corinthia' rel='stylesheet'>
 	<link rel="stylesheet" href="/holberton_school-icon/style.css">
+	<!-- Javascript Import -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="scripts.js"></script>
+	<!-- Slick Carousel Import -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body class="bg-cover">
@@ -65,7 +69,7 @@
 							bg-stone-900/50
 							p-5 flex flex-row">
 					<div class="flex flex-col">
-						<div class="font-bold">Current Weather Conditions:</div>
+						<div class="font-bold">Current Conditions:</div>
 						<div class="date"></div>
 						<div class="temp"></div>
 						<div class="current-condition"></div>
@@ -94,19 +98,26 @@
 				<div class="font-corinthia
 							text-6xl
 							mb-3">
-					A room for everyone
+					Something for everyone
 				</div>
 				<div class="content-block
 							border-2 border-aquamarine rounded
 							bg-stone-900/50
 							p-5">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Dictumst quisque sagittis purus sit amet volutpat consequat. Pellentesque
-					habitant morbi tristique senectus et netus. Risus quis varius quam quisque id diam vel quam
-					elementum. Mattis pellentesque id nibh tortor id. Pellentesque habitant morbi tristique senectus et.
-					Pellentesque sit amet porttitor eget dolor morbi non arcu. Vel fringilla est ullamcorper eget nulla
-					facilisi. Elementum integer enim neque volutpat ac tincidunt vitae semper. Eget lorem dolor sed
-					viverra ipsum nunc aliquet bibendum enim.
+					<div class="amenities-carousel1">
+						<div class="resort-img">
+							<img src="./images/WavesResort.jpg">
+							<p>Enjoy our beachside cabins</p>
+						</div>
+						<div class="palapa-img">
+							<img src="./images/PalapaResort.jpg">
+							<p>Relax in our Palapa Lounge</p>
+						</div>
+						<div class="scuba-img">
+							<img src="./images/Scuba.jpg">
+							<p>Experiences you won't forget</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="border-b-2 border-aquamarine
@@ -127,13 +138,67 @@
 							border-2 border-aquamarine rounded
 							bg-stone-900/50
 							p-5">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Dictumst quisque sagittis purus sit amet volutpat consequat. Pellentesque
-					habitant morbi tristique senectus et netus. Risus quis varius quam quisque id diam vel quam
-					elementum. Mattis pellentesque id nibh tortor id. Pellentesque habitant morbi tristique senectus et.
-					Pellentesque sit amet porttitor eget dolor morbi non arcu. Vel fringilla est ullamcorper eget nulla
-					facilisi. Elementum integer enim neque volutpat ac tincidunt vitae semper. Eget lorem dolor sed
-					viverra ipsum nunc aliquet bibendum enim.
+					<div class="testimonial-carousel1">
+						<div class="testimonial1
+									float-left
+									my-2">
+							<div class="profile-container
+										float-left
+										border border-aquamarine rounded
+										p-2 mr-2">
+								<img class="profile-img
+											rounded-full"
+								 src="./images/Profile1.jpg"/>
+								<p class="text-center">
+									<i>Jane Doe</i>
+								</p>
+							</div>
+							<p class="text-left">
+								"I spent the best week of my life here! All I can
+								 think about is going back. I would highly
+								 recommend Waves to anyone."
+							</p>
+						</div>
+						<div class="testimonial2
+									float-left
+									my-2">
+							<div class="profile-container
+										float-left
+										border border-aquamarine rounded
+										p-2 mr-2">
+								<img class="profile-img
+											rounded-full"
+								 src="./images/Profile2.jpg"/>
+								<p class="text-center">
+									<i>John Doe</i>
+								</p>
+							</div>
+							<p class="text-left">
+								"Waves was so much fun. And I can't believe how
+								 affordable it is. I'm coming back ASAP!"
+							</p>
+						</div>
+						<div class="testimonial3
+									float-left
+									my-2">
+							<div class="profile-container
+										float-left
+										border border-aquamarine rounded
+										p-2 mr-2">
+								<img class="profile-img
+											rounded-full"
+								 src="./images/Profile3.jpg"/>
+								 <p class="text-center">
+									<i>Eod Nhoj</i>
+								</p>
+							</div>
+							<p class="text-left">
+								"The staff was so friendly! There's so much to do
+								 and see that I couldn't fit it all in. Jetski jousting
+								 was the most fun I've had all year."
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="border-b-2 border-aquamarine

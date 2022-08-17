@@ -17,6 +17,11 @@ body {
 	font-family: 'Corinthia';
 }
 
+.profile-img {
+	width: 4rem;
+	height: 4rem;
+}
+
 
 /* !!!!! Header Section !!!!! */
 
