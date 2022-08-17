@@ -30,7 +30,7 @@ function displayResults(weather) {
 }
 
 function dateBuilder (d) {
-  let months = ["Janurary", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[d.getDay()];
   let date = d.getDate();
@@ -48,10 +48,30 @@ $(document).ready(function() {
 
 
 function loadActivities() {
-  const activities = ["Bow Fishing", "SCUBA", "White Whale hunting", "Surfing", "Kayaking", "Wind Surfing", "Jetski Jousting", "Snorkeling", "3 Hour Boat Tours"]
+  const activities = ["Bow Fishing", "SCUBA", "White Whale Hunting", "Surfing", "Kayaking", "Wind Surfing", "Jetski Jousting", "Snorkeling", "3 Hour Boat Tours"]
   const shuffled = activities.sort(() => 0.5 - Math.random());
   for (let i = 0; i < 4; i++)
   {
     $(`.activity${i}`).append(`${shuffled[i]}`)
   }
 }
+
+$(document).ready(function(){
+  $('.amenities-carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+});
+
+$(document).ready(function(){
+  $('.testimonial-carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+});
