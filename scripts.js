@@ -3,20 +3,10 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
-// const searchbox = document.querySelector('.search-box');
-// searchbox.addEventListener('keypress', setQuery);
-
 $(document).ready(function () {
 	getResults("Honolulu");
+  loadActivities();
 	});
-
-// function setQuery(evt) {
-//   if (evt.key == 'Enter') {
-//     if (searchbox.value) 
-//       getResults(searchbox.value);
-//     console.log(searchbox.value);
-//   }
-// }
 
 function getResults(query) {
     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
@@ -25,13 +15,7 @@ function getResults(query) {
     }).then(displayResults);
 }
 
-
-
 function displayResults(weather) {
-  console.log(weather);
-  // let city = document.querySelector('.location .city');
-  // $('.city' ).empty();
-  // city.innerText = `${weather.name}, ${weather.sys.country}`;
   let now = new Date();
   let date = document.querySelector('.date');
   date.innerText = dateBuilder(now);
@@ -55,11 +39,19 @@ function dateBuilder (d) {
   return `${day} ${date} ${month} ${year}`;
 }
 
+$(document).ready(function() {
+  $("#submit").click(function () {
+    $(".form").empty();
+    $(".form").append(`<p>Thank you for your interest, we'll get back to you soon!</p>`)
+  });
+});
 
-function displayLoading(loading) {
-	if (loading) {
-		$('.city').wrap('<div class="loader"></div>');
-	} else {
-		$(".city").unwrap();
-	}
+
+function loadActivities() {
+  const activities = ["Bow Fishing", "SCUBA", "White Whale hunting", "Surfing", "Kayaking", "Wind Surfing", "Jetski Jousting", "Snorkeling", "3 Hour Boat Tours"]
+  const shuffled = activities.sort(() => 0.5 - Math.random());
+  for (let i = 0; i < 4; i++)
+  {
+    $(`.activity${i}`).append(`${shuffled[i]}`)
+  }
 }
