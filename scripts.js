@@ -48,30 +48,14 @@ $(document).ready(function() {
 
 
 function loadActivities() {
-  const activities = ["Bow Fishing", "SCUBA", "White Whale Hunting", "Surfing", "Kayaking", "Wind Surfing", "Jetski Jousting", "Snorkeling", "3 Hour Boat Tours"]
-  const shuffled = activities.sort(() => 0.5 - Math.random());
+  const activities = ["Bow Fishing", "SCUBA", "White Whale hunting", "Surfing", "Fugu carving for beginners",
+                      "Kayaking", "Wind Surfing", "Jetski Jousting", "Snorkeling", "Shark cage diving", 
+                      "3 Hour Boat Tours"]
+  let randomized = activities.sort(() => 0.5 - Math.random());
+  randomized.slice(0, 4);
+  randomized.sort();
   for (let i = 0; i < 4; i++)
   {
-    $(`.activity${i}`).append(`${shuffled[i]}`)
+    $(`.activity${i}`).append(`${randomized[i]}`)
   }
 }
-
-$(document).ready(function(){
-  $('.amenities-carousel').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-  });
-});
-
-$(document).ready(function(){
-  $('.testimonial-carousel').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-  });
-});
