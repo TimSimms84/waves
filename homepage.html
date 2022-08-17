@@ -16,30 +16,32 @@
 	<!-- Javascript Import -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="scripts.js"></script>
-	<!-- Slick Carousel Import -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- Tailwind Carousel Import -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </head>
 
 <body class="bg-cover">
 	<div class="flex flex-col
 				h-screen">
 		<!-- Header -->
-		<header class="flex flex-row justify-between
+		<header class="flex flex-row justify-center
 					   mx-6 mt-3">
 			<div class="logo
 						flex flex-col
-						mb-2 w-28">
+						mb-2 w-36">
 				<div class="logo-title
 							self-center
-							font-corinthia text-5xl">
+							font-corinthia text-8xl">
 					Waves
 				</div>
 				<div class="logo-subtitle
-							-mt-4
+							-mt-6
 							self-center
-							font-corinthia text-xl">
-					Island Resort
+							font-corinthia text-3xl">
+					Island&nbsp;&nbsp;&nbsp;Resort
 				</div>
 			</div>
 		</header>
@@ -51,7 +53,7 @@
 		<main class="no-scrollbar
 					 flex flex-col flex-1 items-center self-center
 					 overflow-y-auto
-					 p-5">
+					 p-5 w-full">
 			<!-- Weather Card -->
 			<div class="content current-weather
 						bg-stone-900/50
@@ -100,23 +102,49 @@
 							mb-3">
 					Something for everyone
 				</div>
-				<div class="content-block
+				<div class="content-block-amenities
 							border-2 border-aquamarine rounded
 							bg-stone-900/50
-							p-5">
-					<div class="amenities-carousel1">
-						<div class="resort-img">
-							<img src="./images/WavesResort.jpg">
-							<p>Enjoy our beachside cabins</p>
+							py-5 w-auto">
+					<div id="amenitiesCarousel"
+						 class="carousel slide relative
+						 		flex flex-row"
+						 data-bs-ride="carousel">
+						<button class="carousel-control-prev flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+							type="button"
+							data-bs-target="#amenitiesCarousel"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<div class="carousel-inner relative
+						 			 w-full overflow-hidden">
+							<div class="resort-img
+										carousel-item active
+										relative float-left w-full">
+								<img src="./images/WavesResort.jpg">
+								<p>Enjoy our beachside cabins</p>
+							</div>
+							<div class="palapa-img
+										carousel-item
+										relative float-left w-full">
+								<img src="./images/PalapaResort.jpg">
+								<p>Relax in our Palapa Lounge</p>
+							</div>
+							<div class="scuba-img
+										carousel-item
+										relative float-left w-full">
+								<img src="./images/Scuba.jpg">
+								<p>Experiences you won't forget</p>
+							</div>
 						</div>
-						<div class="palapa-img">
-							<img src="./images/PalapaResort.jpg">
-							<p>Relax in our Palapa Lounge</p>
-						</div>
-						<div class="scuba-img">
-							<img src="./images/Scuba.jpg">
-							<p>Experiences you won't forget</p>
-						</div>
+						<button class="carousel-control-next flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+								type="button"
+								data-bs-target="#amenitiesCarousel"
+								data-bs-slide="next">
+							<span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -134,70 +162,98 @@
 							mb-3">
 					What our guests have to say
 				</div>
-				<div class="content-block
+				<div class="content-block-testimonial
 							border-2 border-aquamarine rounded
 							bg-stone-900/50
-							p-5">
-					<div class="testimonial-carousel1">
-						<div class="testimonial1
-									float-left
-									my-2">
-							<div class="profile-container
-										float-left
-										border border-aquamarine rounded
-										p-2 mr-2">
-								<img class="profile-img
-											rounded-full"
-								 src="./images/Profile1.jpg"/>
-								<p class="text-center">
-									<i>Jane Doe</i>
-								</p>
+							py-5 w-auto">
+					<div id="testimonialCarousel"
+						 class="carousel slide relative
+						 		flex flex-row"
+						 data-bs-ride="carousel">
+						<button class="carousel-control-prev flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+						type="button"
+						data-bs-target="#testimonialCarousel"
+						data-bs-slide="prev">
+							<span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<div class="carousel-inner relative
+									w-full overflow-hidden">
+							<div class="testimonial1
+										carousel-item active
+										float-left w-full
+										my-2">
+								<div class="profile-container
+											float-left
+											border border-aquamarine rounded
+											p-2 mr-2">
+									<img class="profile-img
+												rounded-full"
+									src="./images/Profile1.jpg"/>
+									<p class="text-center">
+										<i>Jane Doe</i>
+									</p>
+								</div>
+								<div class="w-2/3 float-right">
+									<p class="text-left">
+										"I spent the best week of my life here! All I can
+										think about is going back."
+									</p>
+								</div>
 							</div>
-							<p class="text-left">
-								"I spent the best week of my life here! All I can
-								 think about is going back. I would highly
-								 recommend Waves to anyone."
-							</p>
-						</div>
-						<div class="testimonial2
-									float-left
-									my-2">
-							<div class="profile-container
-										float-left
-										border border-aquamarine rounded
-										p-2 mr-2">
-								<img class="profile-img
-											rounded-full"
-								 src="./images/Profile2.jpg"/>
-								<p class="text-center">
-									<i>John Doe</i>
-								</p>
+							<div class="testimonial2
+										carousel-item
+										float-left w-full
+										my-2">
+								<div class="profile-container
+											float-left
+											border border-aquamarine rounded
+											p-2 mr-2">
+									<img class="profile-img
+												rounded-full"
+									src="./images/Profile2.jpg"/>
+									<p class="text-center">
+										<i>John Doe</i>
+									</p>
+								</div>
+								<div class="w-2/3 float-right">
+									<p class="text-left">
+										"Waves was so much fun. And I can't believe how
+										affordable it is. I'm coming back ASAP!"
+									</p>
+								</div>
 							</div>
-							<p class="text-left">
-								"Waves was so much fun. And I can't believe how
-								 affordable it is. I'm coming back ASAP!"
-							</p>
-						</div>
-						<div class="testimonial3
-									float-left
-									my-2">
-							<div class="profile-container
-										float-left
-										border border-aquamarine rounded
-										p-2 mr-2">
-								<img class="profile-img
-											rounded-full"
-								 src="./images/Profile3.jpg"/>
-								 <p class="text-center">
-									<i>Eod Nhoj</i>
-								</p>
+							<div class="testimonial3
+										carousel-item
+										float-left w-full
+										my-2">
+								<div class="profile-container
+											float-left
+											border border-aquamarine rounded
+											p-2 mr-2">
+									<img class="profile-img
+												rounded-full"
+									src="./images/Profile3.jpg"/>
+									<p class="text-center">
+										<i>Eod Nhoj</i>
+									</p>
+								</div>
+								<div class="w-2/3 float-right">
+									<p class="text-left">
+										"The staff was so friendly! There's so much to do
+										and see. Jetski jousting
+										was the most fun I've had all year."
+									</p>
+								</div>
 							</div>
-							<p class="text-left">
-								"The staff was so friendly! There's so much to do
-								 and see that I couldn't fit it all in. Jetski jousting
-								 was the most fun I've had all year."
-							</p>
 						</div>
+						<button class="carousel-control-next flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+						type="button"
+						data-bs-target="#testimonialCarousel"
+						data-bs-slide="next">
+							<span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
 				</div>
 			</div>

@@ -56,6 +56,9 @@ function loadActivities() {
   randomized.sort();
   for (let i = 0; i < 4; i++)
   {
-    $(`.activity${i}`).append(`${randomized[i]}`)
+    if (i < 3)
+      $(`.activity${i}`).append(`${randomized[i]}, `)
+    else
+      $(`.activity${i}`).append(`${randomized[i]}`)
   }
 }
