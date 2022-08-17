@@ -39,5 +39,14 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
+.content {
+	min-width: 26rem;
+}
+
+.content-block-amenities,
+.content-block-testimonial {
+	max-width: 29rem;
+}
+
 /* !!!!! Footer Section !!!!! */
 
